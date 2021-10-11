@@ -4,7 +4,7 @@ We need to take an array that contains numbers and revers it without using any i
 
 ## Whiteboard Process
 
-![reverse](https://github.com/Emam96/data-structures-and-algorithms-401/blob/array-reverse/assests/Untitled%20Jam%201.png?raw=true)
+![reverse](https://github.com/Emam96/data-structures-and-algorithms-401/blob/main/assests/My%20First%20Board.jpg?raw=true)
 
 ## Approach & Efficiency
 
