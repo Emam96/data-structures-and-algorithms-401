@@ -3,7 +3,8 @@
 We need to insert a new element to an array and it should be in the middle of the new array
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+
+![insert](https://github.com/Emam96/data-structures-and-algorithms-401/blob/array-insert-shift/assests/cc2.jpg?raw=true)
 
 ## Approach & Efficiency
 
