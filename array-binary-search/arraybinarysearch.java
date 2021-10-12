@@ -5,7 +5,7 @@ public class arraybinarysearch {
 
         int arr[] = { 2, 3, 4, 10, 40 };
         int n = arr.length;
-        int x = 40;
+        int x = 66;
         System.out.println(binarySearch(arr, 0, n - 1, x));
     }
 
