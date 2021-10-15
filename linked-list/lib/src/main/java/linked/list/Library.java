@@ -4,7 +4,17 @@
 package linked.list;
 
 public class Library {
-    public boolean someLibraryMethod() {
-        return true;
+    public static void main(String[] args) {
+
+        LinkedList list = new LinkedList();
+        list.insert("c");
+        list.insert("b");
+        list.insert("a");
+
+       System.out.println(list.toString());
+
+       list.includes("a");
+        list.includes("emam");
     }
+
 }

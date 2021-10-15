@@ -7,8 +7,63 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
-    @Test void someLibraryMethodReturnsTrue() {
-        Library classUnderTest = new Library();
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+
+    @Test
+    public void testEmptyList() {
+
+        LinkedList list = new LinkedList();
+
+        String msg = list.toString();
+//        System.out.println(msg);
+        assertEquals("Contents:\n" +
+                "list is empty :(", msg);
+
     }
+
+    @Test
+    public void testInsert() {
+
+        LinkedList list = new LinkedList();
+
+         list.insert("emam");
+        String msg = list.toString();
+//        System.out.println(msg);
+        assertEquals("Contents:\n" +
+                "{emam} -> ", msg);
+
+    }
+
+    @Test
+    public void testTrueInclude() {
+        LinkedList list = new LinkedList();
+        list.insert("emam");
+        boolean msg = list.includes("emam");
+           assertTrue(msg);
+
+    }
+
+    @Test
+    public void testFalseInclude() {
+        LinkedList list = new LinkedList();
+        list.insert("emam");
+        boolean msg = list.includes("someone");
+        assertFalse(msg);
+
+    }
+
+    @Test
+    public void testAllList() {
+        LinkedList list = new LinkedList();
+        list.insert("emam");
+        list.insert("emam");
+        list.insert("emam");
+        String msg = list.toString();
+//        System.out.println(msg);
+        assertEquals("Contents:\n" +
+                "{emam} -> {emam} -> {emam} -> ", msg);
+
+    }
+
+
+
 }
