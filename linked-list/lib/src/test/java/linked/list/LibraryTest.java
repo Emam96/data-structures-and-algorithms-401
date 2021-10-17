@@ -64,6 +64,61 @@ class LibraryTest {
 
     }
 
+    @Test
+    public void testAppend() {
+        LinkedList list = new LinkedList();
+        list.insert("emam");
+        list.insert("emam");
+        list.insert("emam");
+        list.append("someone");
+        String msg = list.toString();
+  // TESTING FOR MULTIPLE INPUTS
+        assertTrue(msg.endsWith("{someone} -> "));
+        list.append("else");
+        String msg2 = list.toString();
+        System.out.println(msg2);
+        assertTrue(msg2.endsWith("{else} -> "));
+    }
+
+
+
+    @Test
+    public void testInsertBefore() {
+        LinkedList list = new LinkedList();
+        list.insert("emam");
+        list.insert("ahmed");
+        list.insert("ali");
+        // MIDDLE
+        list.insertBefore("ahmed", "hani");
+        String msg = list.toString();
+        System.out.println(msg);
+        assertEquals("Contents:\n" +
+                "{ali} -> {hani} -> {ahmed} -> {emam} -> ", msg);
+        // FIRST
+        list.insertBefore("ali", "lutfy");
+        String msg2 = list.toString();
+        System.out.println(msg2);
+        assertEquals("Contents:\n" +
+                "{lutfy} -> {ali} -> {hani} -> {ahmed} -> {emam} -> ", msg2);
+
+    }
+
+
+    @Test
+    public void testInsertAfter() {
+        LinkedList list = new LinkedList();
+        list.insert("emam");
+        list.insert("ahmed");
+        list.insert("ali");
+        // MIDDLE
+        list.insertAfter("ali", "amman");
+        String msg = list.toString();
+        System.out.println(msg);
+        assertEquals("Contents:\n" +
+                "{ali} -> {amman} -> {ahmed} -> {emam} -> ", msg);
+
+
+    }
 
 
 }

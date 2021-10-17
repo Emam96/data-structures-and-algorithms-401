@@ -23,7 +23,54 @@ public class LinkedList {
 
 
 
-    public boolean includes(String value){
+   public void append(String value) {
+        Node newLast = new Node(value);
+        newLast.next = null;
+        if (head == null) {
+            head = newLast;
+        } else {
+            Node temp = new Node(value);
+            temp = head;
+            while (temp.next != null)
+                temp = temp.next;
+            temp.next = newLast;
+        }
+    }
+
+    public void insertBefore(String currentValue, String value) {
+        if (head.data == currentValue) {
+            Node n = new Node(value);
+            n.next = head;
+            head = n;
+        } else {
+            Node p = null;
+            for (Node n = head; n.data != currentValue;
+                 p = n, n = n.next)
+                ;
+            Node m = new Node(value);
+            m.next = p.next;
+            p.next = m;
+        }
+    }
+
+    public void insertAfter(String currentValue, String value)
+    {
+         Node node = new Node(value);
+        Node current = this.head;
+        while (current.next != null) {
+            if (current.data == currentValue) {
+                node.next = current.next;
+                current.next = node;
+                break;
+            }
+            current = current.next;
+        }
+    }
+
+
+
+
+        public boolean includes(String value){
         Node indicator = head;
         while(indicator != null){
             if( indicator.data == value){
