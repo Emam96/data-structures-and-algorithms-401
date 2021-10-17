@@ -13,13 +13,13 @@ I created a Node class, so I can make intense from it to create my linked list, 
 
 ## API
 
-**insert** :  Adds a new node with that value to the head of the list with an O(1) Time performance.
+**insert** :  Adds a new node with that value to the head of the list with an O(1) Time performance space will be also O(1) as it will take one parametere each run.
 
-**includes** : Indicates whether that value exists as a Node’s value somewhere within the list.
+**includes** : Indicates whether that value exists as a Node’s value somewhere within the list so the time performance will be O(n) the space depends on the number of nodes so it will be O(n).
 
-**toString** : Returns: a string representing all the values in the Linked List, formatted as:
+**toString** : Returns: a string representing all the values in the Linked List so the time performance will be O(n), formatted as:
 `"{ a } -> { b } -> { c } -> NULL"`
-
+the number of nodes so it will be O(n).
 
 
 ## specifications and tasks
