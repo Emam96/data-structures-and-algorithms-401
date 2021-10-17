@@ -15,6 +15,18 @@ public class Library {
 
        list.includes("a");
         list.includes("emam");
+
+        list.append("e");
+
+        System.out.println(list.toString());
+
+        list.insertBefore("b", "a.a");
+        list.insertBefore("e", "c.a");
+        System.out.println(list.toString());
+
+        list.insertAfter("e", "irbid");
+
+        System.out.println(list.toString());
     }
 
 }
