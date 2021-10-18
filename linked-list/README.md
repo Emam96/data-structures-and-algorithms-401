@@ -40,7 +40,7 @@ Extend the linked list with extra methods.
 
 ## Whiteboard Process 
 
-![list](https://github.com/Emam96/data-structures-and-algorithms-401/blob/main/assests/My%20First%20Board%20(5).jpg?raw=true)
+![list](https://github.com/Emam96/data-structures-and-algorithms-401/blob/main/assests/My%20First%20Board%20(6).jpg?raw=true)
 
 ## Approach & Efficiency
 Inserting At End of the list

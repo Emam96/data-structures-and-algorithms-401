@@ -37,6 +37,8 @@ public class LinkedList {
         }
     }
 
+
+
     public void insertBefore(String currentValue, String value) {
         if (head.data == currentValue) {
             Node n = new Node(value);
@@ -57,7 +59,7 @@ public class LinkedList {
     {
          Node node = new Node(value);
         Node current = this.head;
-        while (current.next != null) {
+        while (current != null) {
             if (current.data == currentValue) {
                 node.next = current.next;
                 current.next = node;

@@ -17,6 +17,7 @@ public class Library {
         list.includes("emam");
 
         list.append("e");
+        list.append("F");
 
         System.out.println(list.toString());
 
@@ -25,6 +26,7 @@ public class Library {
         System.out.println(list.toString());
 
         list.insertAfter("e", "irbid");
+        list.insertAfter("F", "last");
 
         System.out.println(list.toString());
     }
