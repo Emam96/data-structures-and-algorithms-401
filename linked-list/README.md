@@ -62,3 +62,46 @@ We can use the following steps to insert a new node after a node in the single l
 * Step 6: Every time check whether temp is reached to last node or not. If it is reached to last node then display 'Given node is not found in the list!!! Insertion not possible!!!' and terminate the function. Otherwise move the temp to next node.
 * Step 7: Finally, Set 'newNode → next = temp → next' and 'temp → next = newNode'
 
+# Day 3 
+
+# Challenge Summary
+
+adding a method that takes an integer (n) and return a node value from a linked list that places (n) from the tail of the linked list.
+
+## Whiteboard Process
+
+![list2](https://github.com/Emam96/data-structures-and-algorithms-401/blob/main/assests/Untitled.jpg?raw=true)
+
+## Approach & Efficiency
+
+First, we place a condition to process any arguments above 0 and returns a message to describe the error
+We create a node and assign it as a head, we place a counter by adding an integer with the value of 0, we loop with the condition (node.next != null).
+If we reached the max cap, we loop again with the counter - the passed integer
+We add a condition to detect if the integer is bigger than the list and return an error.
+
+## Solution
+
+public String kthFromEnd(int num) {
+if (num < 0) {
+String note = "number can't be less than 0";
+
+             return note;
+        }
+        Node item = this.head;
+        int count = 0;
+        while (item.next != null) {
+            item = item.next;
+            count++;
+        }
+        item = this.head;
+        int finalCount = count - num;
+        if (finalCount <= -1) {
+            String note = "number can't be higher than the length of the list";
+
+            return note;
+        }
+        for (int i = 0; i < finalCount; i++) {
+            item = item.next;
+        }
+        return "The " + num + "   index from the tail is =  " + item.data;
+    }

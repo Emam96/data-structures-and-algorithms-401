@@ -29,6 +29,9 @@ public class Library {
         list.insertAfter("F", "last");
 
         System.out.println(list.toString());
+        System.out.println(list.kthFromEnd(9));
+
+
     }
 
 }
