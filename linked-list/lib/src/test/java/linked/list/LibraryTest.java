@@ -121,4 +121,54 @@ class LibraryTest {
     }
 
 
+    @Test
+    public void testKth() {
+
+        // HAPPY PATH
+        LinkedList list = new LinkedList();
+        list.insert("emam");
+        list.insert("ahmed");
+        list.insert("ali");
+
+        System.out.println(list.kthFromEnd(2));
+        String note = list.kthFromEnd(2);
+        assertEquals("The 2   index from the tail is =  ali", note);
+    }
+
+    @Test
+    public void testKthGreaterThanTheList() {
+        LinkedList list = new LinkedList();
+        list.insert("emam");
+        list.insert("ahmed");
+        list.insert("ali");
+
+        System.out.println(list.kthFromEnd(3));
+        String note = list.kthFromEnd(3);
+        assertEquals("number can't be higher than the length of the list", note);
+    }
+
+    @Test
+    public void testKthSmallerThanTheList() {
+        LinkedList list = new LinkedList();
+        list.insert("emam");
+        list.insert("ahmed");
+        list.insert("ali");
+
+        System.out.println(list.kthFromEnd(-1));
+        String note = list.kthFromEnd(-1);
+        assertEquals("number can't be less than 0", note);
+    }
+
+    @Test
+    public void testKthIndexOfOne() {
+        LinkedList list = new LinkedList();
+        list.insert("emam");
+
+
+        System.out.println(list.kthFromEnd(0));
+        String note = list.kthFromEnd(0);
+        assertEquals("The 0   index from the tail is =  emam", note);
+    }
+
+
 }

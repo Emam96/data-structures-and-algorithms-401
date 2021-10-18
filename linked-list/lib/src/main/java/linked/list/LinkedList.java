@@ -71,6 +71,33 @@ public class LinkedList {
 
 
 
+    public String  kthFromEnd(int num) {
+            if (num < 0) {
+                String note = "number can't be less than 0";
+
+                 return note;
+            }
+            Node item = this.head;
+            int count = 0;
+            while (item.next != null) {
+                item = item.next;
+                count++;
+            }
+            item = this.head;
+            int finalCount = count - num;
+            if (finalCount <= -1) {
+                String note = "number can't be higher than the length of the list";
+
+                return note;
+            }
+            for (int i = 0; i < finalCount; i++) {
+                item = item.next;
+            }
+            return "The " + num + "   index from the tail is =  " + item.data;
+        }
+
+
+
 
         public boolean includes(String value){
         Node indicator = head;
@@ -105,7 +132,6 @@ public class LinkedList {
         }
 
         return retStr;
-
 
 
     }
