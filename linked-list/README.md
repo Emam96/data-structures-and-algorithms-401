@@ -105,3 +105,32 @@ String note = "number can't be less than 0";
         }
         return "The " + num + "   index from the tail is =  " + item.data;
     }
+
+# Day 4 
+
+# Challenge Summary
+Zip two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list.
+
+## Whiteboard Process
+![list2](https://github.com/Emam96/data-structures-and-algorithms-401/blob/main/assests/Untitled%20(1).jpg?raw=true)
+
+
+
+## Solution
+
+public static LinkedList linkedListZip(LinkedList list1, LinkedList list2) {
+LinkedList newLl = new LinkedList();
+Node current1 = list1.head;
+Node current2 = list2.head;
+while (current1 != null || current2 != null) {
+if (current1 != null) {
+newLl.insert(current1.data);
+current1 = current1.next;
+}
+if (current2 != null) {
+newLl.insert(current2.data);
+current2 = current2.next;
+}
+}
+return newLl;
+}

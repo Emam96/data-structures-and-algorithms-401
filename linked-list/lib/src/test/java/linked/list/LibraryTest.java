@@ -170,5 +170,20 @@ class LibraryTest {
         assertEquals("The 0   index from the tail is =  emam", note);
     }
 
+    @Test
+    public void testZip() {
+        LinkedList list = new LinkedList();
+        LinkedList list2 = new LinkedList();
+        list.insert("emam");
+        list.insert("shararah");
+        list2.insert("murtadha");
+        list2.insert("ali");
+
+        LinkedList test = ZipLists.linkedListZip(list, list2);
+        System.out.println(test.toString());
+
+        assertTrue(test.includes("emam"));
+        assertTrue(test.includes("ali"));
+    }
 
 }
