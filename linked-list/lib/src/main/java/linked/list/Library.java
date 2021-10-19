@@ -11,7 +11,7 @@ public class Library {
         list.insert("b");
         list.insert("a");
 
-       System.out.println(list.toString());
+
 
        list.includes("a");
         list.includes("emam");
