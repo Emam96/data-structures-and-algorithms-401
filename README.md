@@ -8,3 +8,4 @@
 | array-insert-shift  | [click here](array-insert-shift/README.md)   |
 | array-binary-search | [click here](arraybinarysearch/README.md)    |
 | linked list         | [click here](linked-list/README.md)          |
+| Stack and Queues    | [click here](stack-and-queue/README.md)      |
