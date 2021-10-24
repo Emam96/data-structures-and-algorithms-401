@@ -48,3 +48,55 @@ Should raise exception when called on empty stack
 4. is empty
 Arguments: none
 Returns: Boolean indicating whether or not the queue is empty
+
+
+# Lab 11 
+
+# Challenge Summary
+Implement a Queue using two Stacks.
+
+## Whiteboard Process
+![queuewithtwostacks](https://github.com/Emam96/data-structures-and-algorithms-401/blob/main/assests/cc11.jpg?raw=true)
+
+## Approach & Efficiency
+enqueue
+Arguments: value
+Inserts value into the PseudoQueue, using a first-in, first-out approach.
+dequeue
+Arguments: none
+Extracts a value from the PseudoQueue, using a first-in, first-out approach.h
+
+## Solution
+public class StackedQueue {
+
+    static Stack stackOne = new Stack();
+    static Stack stackTwo = new Stack();
+
+    static void enQueue(String x)
+    {
+        while (!stackOne.isEmpty())
+        {
+            stackTwo.push(stackOne.pop());
+        }
+
+        stackOne.push(x);
+
+        while (!stackTwo.isEmpty())
+        {
+            stackOne.push(stackTwo.pop());
+        }
+    }
+
+
+    static String deQueue()
+    {
+        if (stackOne.isEmpty())
+        {
+            System.out.println("Q is Empty");
+            System.exit(0);
+        }
+
+        String x = stackOne.peek();
+        stackOne.pop();
+        return x;
+    }

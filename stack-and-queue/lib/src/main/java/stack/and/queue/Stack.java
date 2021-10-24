@@ -22,7 +22,7 @@ public class Stack {
     }
 
 
-    public void pop()
+    public String pop()
     {
 
         if (!isEmpty()) {
@@ -35,8 +35,7 @@ public class Stack {
 
         }
 
-
-
+        return top.data;
     }
 
 

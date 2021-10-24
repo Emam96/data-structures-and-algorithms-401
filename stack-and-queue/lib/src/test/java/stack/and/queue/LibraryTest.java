@@ -159,4 +159,25 @@ class LibraryTest {
 
     }
 
+    /////////////////////////////////////////////////////////////////////// Stacked Queue
+
+    @Test void errorTestForStackedQueue() {
+
+        StackedQueue q = new StackedQueue();
+
+        String errorMsg = q.dequeue();
+        assertEquals("Queue is empty", errorMsg);
+
+    }
+
+    @Test void happyPathForStackedQueue() {
+
+        StackedQueue q = new StackedQueue();
+        q.enqueue("emam");
+        String msg = q.dequeue();
+        assertEquals("emam", msg);
+
+    }
+
+
 }
