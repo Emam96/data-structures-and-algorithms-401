@@ -179,5 +179,39 @@ class LibraryTest {
 
     }
 
+/////////////////////////////////////////////////////////////////////////////////// ANIMAL SHELTER
+
+    @Test void happyPathForAnimalShelter() {
+
+        AnimalShelter shop = new AnimalShelter();
+        shop.enq("dog");
+        shop.enq("dog");
+        shop.enq("dog");
+        shop.enq("dog");
+        shop.enq("cat");
+        shop.enq("cat");
+        shop.enq("cat");
+        shop.enq("cat");
+        shop.enq("fish");
+        shop.enq("Emam");
+
+        String msg = shop.deqCat();
+//        System.out.println(shop.deqCat());
+        assertEquals("The oldest poor cat===>  cat", msg);
+
+    }
+
+
+    @Test void edgeCaseForAnimalShelter() {
+
+        AnimalShelter shop = new AnimalShelter();
+
+
+        shop.enq("fish");
+        String msg = shop.deqCat();
+        System.out.println(shop.deqCat());
+        assertEquals("The oldest poor cat===>  Queue is empty", msg);
+
+    }
 
 }
