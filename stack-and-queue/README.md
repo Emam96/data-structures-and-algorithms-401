@@ -100,3 +100,76 @@ public class StackedQueue {
         stackOne.pop();
         return x;
     }
+
+
+## Lab 12 
+
+# Challenge Summary
+
+Creating a class called AnimalShelter which holds only dogs and cats.
+The shelter operates using a first-in, first-out approach.
+
+## Whiteboard Process
+
+![animal](https://github.com/Emam96/data-structures-and-algorithms-401/blob/main/assests/cc12.jpg?raw=true)
+
+## Approach & Efficiency
+
+enqueue
+* Arguments: animal can be either a dog or a cat.
+
+dequeue
+1. deqDog: returns the oldest dog.
+2. deqCat: returns the oldest cat.
+3. deqAny: returns the oldest pet.
+
+## Solution
+
+public class AnimalShelter {
+
+
+    Queue  cats = new Queue() ;
+    Queue  dogs = new Queue() ;
+
+    int catArrivalTime = 0;
+    int dogArrivalTime = 0;
+    public void enq( String animal){
+        if(animal.equals("cat") || animal.equals("Cat")){
+            cats.enqueue("cat");
+            catArrivalTime++;
+        }else if (animal.equals("dog") || animal.equals("Dog")){
+            dogs.enqueue("dog");
+            dogArrivalTime++;
+        } else if (!animal.equals("dog") || !animal.equals("Dog") || !animal.equals("cat") || !animal.equals("Cat") ){
+              System.out.println("This Shelter is only for cats and dogs");
+        }
+    }
+
+    public String deqDog(){
+        return "The oldest poor dog ===> " + dogs.dequeue();
+    }
+
+    public String deqCat(){
+        return "The oldest poor cat===>  " + cats.dequeue();
+    }
+
+    public String deqAny(){
+        if(cats.isEmpty()){
+            return deqDog();
+        }
+
+        if(dogs.isEmpty()){
+            return deqCat();
+        }
+
+        if(catArrivalTime > dogArrivalTime){
+            return deqCat();
+        }else{
+            return deqDog();
+        }
+
+    }
+
+
+
+}

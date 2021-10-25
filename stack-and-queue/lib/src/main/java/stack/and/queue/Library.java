@@ -7,31 +7,45 @@ public class Library {
 
     public static void main(String args[])
     {
-        Stack s = new Stack();
-        s.push("10");
-        s.push("20");
-        s.push("30");
-        s.push("40");
-        s.push("50");
-        s.peek();
-        s.pop();
-        s.peek();
-
-
-Queue q = new Queue();
-
-        q.enqueue("emam");
-        q.enqueue("hadi");
-
-
-     System.out.println(q.dequeue());
-        System.out.println(q.dequeue());
-        System.out.println(q.dequeue());
+//        Stack s = new Stack();
+//        s.push("10");
+//        s.push("20");
+//        s.push("30");
+//        s.push("40");
+//        s.push("50");
+//        s.peek();
+//        s.pop();
+//        s.peek();
+//
+//
+//Queue q = new Queue();
+//
+//        q.enqueue("emam");
+//        q.enqueue("hadi");
+//
+//
+//     System.out.println(q.dequeue());
 //        System.out.println(q.dequeue());
+//        System.out.println(q.dequeue());
+////        System.out.println(q.dequeue());
+//
+//        System.out.println( q.peek());
 
-        System.out.println( q.peek());
 
+        AnimalShelter shop = new AnimalShelter();
+        shop.enq("dog");
+        shop.enq("dog");
+        shop.enq("dog");
+        shop.enq("dog");
+        shop.enq("cat");
+        shop.enq("cat");
+        shop.enq("cat");
+        shop.enq("cat");
+        shop.enq("fish");
+        shop.enq("Emam");
 
+       System.out.println(shop.deqCat());
+        System.out.println(shop.deqAny());
 
 
     }
