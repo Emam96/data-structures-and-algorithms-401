@@ -2,60 +2,76 @@ package stack.and.queue;
 
 
 
-public class Stack {
+public class Stack <T> {
 
-    Node top;
+    Node<T> top;
 
     Stack()
     {
+
         this.top = null;
     }
 
 
-    public void push(String data)
+    public void push( T data)
     {
-        Node temp = new Node(data);
+        Node<T> temp = new Node<>(data);
         temp.data = data;
-        temp.link = top;
+        temp.link = (T) top;
         top = temp;
-        System.out.println(data + " placed on top");
+//        System.out.println(data + " placed on top");
     }
 
+//
+//    public T pop()
+//    {
+//
+//        if (!isEmpty()) {
+//            System.out.println( top.data + " Removed from top");
+//            top = Node<T> top.link;
+//
+//        } else {
+//
+//            System.out.println("Stack is empty");
+//
+//        }
+//
+//        return (T) top.data;
+//    }
 
-    public String pop()
-    {
 
-        if (!isEmpty()) {
-            System.out.println( top.data + " Removed from top");
-            top = (top).link;
 
-        } else {
+    public T pop(){
+        Node temp = top;
+        if(!this.isEmpty()){
+            top = top.next;
+            temp.next = null;
 
-            System.out.println("Stack is empty");
-
+            return (T) temp.data;
         }
-
-        return top.data;
+        return null;
     }
 
 
-
-    public String peek()
+    public T peek()
     {
 
         if (!isEmpty()) {
 
-            return top.data;
+            return (T) top.data;
         }
         else {
-          return   "Stack is empty";
+           System.out.println("Stack is empty");
 
         }
+
+        return null;
     }
 
 
     public boolean isEmpty()
     {
+
         return top == null;
     }
 

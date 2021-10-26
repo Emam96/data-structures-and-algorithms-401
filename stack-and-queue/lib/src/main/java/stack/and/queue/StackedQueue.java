@@ -29,7 +29,7 @@ public class StackedQueue {
             System.exit(0);
         }
 
-        String x = stackOne.peek();
+        String x = (String) stackOne.peek();
         stackOne.pop();
         return x;
     }

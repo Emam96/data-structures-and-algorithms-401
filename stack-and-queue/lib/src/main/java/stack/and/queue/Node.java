@@ -1,29 +1,35 @@
 package stack.and.queue;
 
-public class Node {
+public class Node <T> {
 
-    String data;
-    Node next;
-    Node link;
-    public String getData() {
-        return data;
+//    T data;
+//    Node next;
+//    Node link;
+//    public T getData() {
+//        return data;
+//    }
+//
+//    public Node getNext() {
+//        return next;
+//    }
+//
+//    public Node(T data)
+//    {
+//
+//        this.data = data;
+//        this.next = null;
+//       this.link = link;
+//
+//    }
+
+
+    public  T data;
+    public  Node next;
+    public T link;
+
+    public Node (T value){
+        this.data=value;
     }
-
-    public Node getNext() {
-        return next;
-    }
-
-    public Node(String data)
-    {
-
-        this.data = data;
-        this.next = null;
-       this.link = link;
-
-    }
-
-
-
 
 
 

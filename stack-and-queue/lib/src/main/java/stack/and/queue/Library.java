@@ -13,9 +13,17 @@ public class Library {
 //        s.push("30");
 //        s.push("40");
 //        s.push("50");
-//        s.peek();
+//        System.out.print(s.peek() +"\n");
 //        s.pop();
-//        s.peek();
+//        System.out.print(s.peek() +"\n");
+//        s.pop();
+//        System.out.print(s.peek() +"\n");
+//        s.pop();
+//        System.out.print(s.peek() +"\n");
+//        s.pop();
+//        System.out.print(s.peek() +"\n");
+//        s.pop();
+//        System.out.print(s.peek() +"\n");
 //
 //
 //Queue q = new Queue();
@@ -31,21 +39,28 @@ public class Library {
 //
 //        System.out.println( q.peek());
 
+//
+//        AnimalShelter shop = new AnimalShelter();
+//        shop.enq("dog");
+//        shop.enq("dog");
+//        shop.enq("dog");
+//        shop.enq("dog");
+//        shop.enq("cat");
+//        shop.enq("cat");
+//        shop.enq("cat");
+//        shop.enq("cat");
+//        shop.enq("fish");
+//        shop.enq("Emam");
+//
+//       System.out.println(shop.deqCat());
+//        System.out.println(shop.deqAny());
 
-        AnimalShelter shop = new AnimalShelter();
-        shop.enq("dog");
-        shop.enq("dog");
-        shop.enq("dog");
-        shop.enq("dog");
-        shop.enq("cat");
-        shop.enq("cat");
-        shop.enq("cat");
-        shop.enq("cat");
-        shop.enq("fish");
-        shop.enq("Emam");
 
-       System.out.println(shop.deqCat());
-        System.out.println(shop.deqAny());
+
+
+        String input = "[()]{}{[()()]()}" ;
+
+        System.out.println(BracketValidator.validator(input));
 
 
     }

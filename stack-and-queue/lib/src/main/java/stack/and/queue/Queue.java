@@ -1,9 +1,9 @@
 package stack.and.queue;
 
-public class Queue {
+public class Queue <T> {
 
      Node first;
-     Node last;
+    Node<T> last;
 
      Queue()
     {
@@ -34,33 +34,33 @@ public class Queue {
 
 
 
-   public String dequeue() {
+   public  T dequeue() {
 
        if (isEmpty())
        {
-        return   "Queue is empty";
+        return  (T) "Queue is empty";
 
        }
-       Node temp = first;
-       first = first.next;
+       Node<T> temp = first;
+       first =  first.next;
        if (first == null) {
            last = null;
        }
 
-       return temp.data;
+       return (T) temp.data;
    }
 
 
 
-    public   String peek()
+    public   T peek()
     {
 
         if (first != null) {
 
-           return   first.data;
+           return  (T) first.data;
         }
         else {
-            return  "Queue is empty";
+            return (T) "Queue is empty";
         }
 
     }

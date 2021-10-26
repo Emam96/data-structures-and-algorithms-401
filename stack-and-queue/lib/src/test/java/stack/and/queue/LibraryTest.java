@@ -23,7 +23,7 @@ class LibraryTest {
         s.push("8");
         s.push("6");
 
-        String topOfStack = s.peek();
+        String topOfStack = (String) s.peek();
         assertEquals("6", topOfStack);
 
     }
@@ -38,7 +38,7 @@ class LibraryTest {
 
         s.pop();
 
-        String topOfStack = s.peek();
+        String topOfStack = (String) s.peek();
         assertEquals("8", topOfStack);
 
     }
@@ -67,7 +67,7 @@ class LibraryTest {
 
         s.pop();
 
-        String topOfStack = s.peek();
+        String topOfStack = (String) s.peek();
         assertEquals("8", topOfStack);
 
     }
@@ -77,7 +77,7 @@ class LibraryTest {
 
         Stack s = new Stack();
 
-        String topOfStack = s.peek();
+        String topOfStack = (String) s.peek();
         assertEquals("Stack is empty", topOfStack);
 
     }
@@ -101,7 +101,7 @@ class LibraryTest {
         q.enqueue("emam");
         q.enqueue("ali");
         q.enqueue("tomato");
-        String frontOfQueue = q.peek();
+        String frontOfQueue = (String) q.peek();
         assertEquals("emam", frontOfQueue);
 
     }
@@ -112,7 +112,7 @@ class LibraryTest {
         q.enqueue("emam");
         q.enqueue("ali");
         q.enqueue("tomato");
-        String dequeuedValue = q.dequeue();
+        String dequeuedValue = (String) q.dequeue();
         assertEquals("emam", dequeuedValue);
 
     }
@@ -123,7 +123,7 @@ class LibraryTest {
         q.enqueue("emam");
         q.enqueue("ali");
         q.enqueue("tomato");
-        String frontOfQueue = q.peek();
+        String frontOfQueue = (String) q.peek();
         assertEquals("emam", frontOfQueue);
 
     }
@@ -154,7 +154,7 @@ class LibraryTest {
 
         Queue q = new Queue();
 
-        String errorMsg = q.peek();
+        String errorMsg = (String) q.peek();
         assertEquals("Queue is empty", errorMsg);
 
     }
@@ -214,4 +214,46 @@ class LibraryTest {
 
     }
 
+    //////////////////////////////////////////////////////////////////////////////// Brackets validation
+
+    @Test void edgeCaseForBV() {
+
+        AnimalShelter shop = new AnimalShelter();
+
+
+        String input = "" ;
+
+        System.out.println(BracketValidator.validator(input));
+
+        assertTrue(BracketValidator.validator(input));
+
+    }
+
+
+    @Test void happyPathForBV() {
+
+        AnimalShelter shop = new AnimalShelter();
+
+
+        String input = "()" ;
+
+        System.out.println(BracketValidator.validator(input));
+
+        assertTrue(BracketValidator.validator(input));
+
+    }
+
+
+    @Test void ErrorForBV() {
+
+        AnimalShelter shop = new AnimalShelter();
+
+
+        String input = "(emam" ;
+
+        System.out.println(BracketValidator.validator(input));
+
+        assertFalse(BracketValidator.validator(input));
+
+    }
 }
