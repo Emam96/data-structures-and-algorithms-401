@@ -51,6 +51,37 @@ public class BinarySearchTree extends  BinaryTree {
         return containsNode(root, value);
     }
 
+
+    //////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////
+
+    private int findMax(Node node)
+    {
+        if (node == null) {
+            System.out.println("Tree is empty");
+            return 0;
+        }
+            int res = node.value;
+            int lres = findMax(node.left);
+            int rres = findMax(node.right);
+
+            if (lres > res)
+                res = lres;
+            if (rres > res)
+                res = rres;
+            return res;
+
+    }
+
+
+public int max(){
+
+  return   findMax(root);
+
+}
+
+
+
 }
 
 

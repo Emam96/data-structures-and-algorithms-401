@@ -35,3 +35,36 @@ To create a tree class with three traversal methods (pre-order, in-order, post-o
 |----------------------|--------------------------------------------------------------------------------------------------------|-------------|--------------|
 | add()     | adds a Node with input value to correct location in tree.                     | O(n)        | O(1)         |
 | search()      |  searches the BST for a value. Returns Node if found, or null if not found.    | O(n)        | O(1)         |
+
+
+# Code challenge 16 (max value)
+
+Find the maximum value stored in the tree.
+
+## Whiteboard Process
+
+![max](https://i.imgur.com/qtU83BF.jpeg)
+
+## Approach & Efficiency
+
+* Time Complexity: O(N).
+In the recursive function calls, every node of the tree is processed once and hence the complexity due to the function is O(N) if there are total N nodes in the tree. Therefore, the time complexity is O(N).
+
+* Space Complexity: O(N).
+Recursive call is happening. The every node is processed once and considering the stack space, the space complexity will be O(N).
+
+## Solution
+
+      if (node == null) {
+       System.out.println("Tree is empty");
+       return 0;
+          }
+        int res = node.value;
+       int lres = findMax(node.left);
+       int rres = findMax(node.right);
+
+            if (lres > res)
+                res = lres;
+            if (rres > res)
+                res = rres;
+            return res;

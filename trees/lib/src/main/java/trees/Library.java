@@ -10,15 +10,18 @@ public class Library {
         BinarySearchTree tree = new BinarySearchTree();
 
 
-        tree.add(50);
-        tree.add(10);
-        tree.add(60);
-        tree.add(5);
-        tree.add(75);
+//        tree.add(50);
+//        tree.add(10);
+//        tree.add(60);
+//        tree.add(5);
+//        tree.add(75);
 
         System.out.println(tree.preOrder(tree.root));
         System.out.println(tree.inOrder(tree.root));
         System.out.println(tree.postOrder(tree.root));
+
+
+        System.out.println(tree.max());
 
 
 

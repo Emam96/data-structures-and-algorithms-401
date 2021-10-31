@@ -77,4 +77,35 @@ class LibraryTest {
         assertArrayEquals(Arrays.asList(2,8,5).toArray(), expected.toArray());
     }
 
+    @Test void testMaxHappyPath() {
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.add(5);
+        tree.add(2);
+        tree.add(8);
+
+       int max = tree.max();
+       assertEquals(8, max);
+    }
+
+    @Test void testMaxFailure() {
+        BinarySearchTree tree = new BinarySearchTree();
+
+
+        int max = tree.max();
+        assertEquals(0, max);
+    }
+
+    @Test void testMaxEdgeCase() {
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.add(5);
+        tree.add(2);
+        tree.add(8);
+        tree.add(8);
+
+        int max = tree.max();
+        System.out.println(max);
+        assertEquals(8, max);
+    }
+
+
 }
