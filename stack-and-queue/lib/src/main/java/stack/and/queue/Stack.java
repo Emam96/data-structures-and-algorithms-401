@@ -16,8 +16,8 @@ public class Stack <T> {
     public void push( T data)
     {
         Node<T> temp = new Node<>(data);
-        temp.data = data;
-        temp.link = (T) top;
+//        temp.data = data;
+        temp.next =  top;
         top = temp;
 //        System.out.println(data + " placed on top");
     }

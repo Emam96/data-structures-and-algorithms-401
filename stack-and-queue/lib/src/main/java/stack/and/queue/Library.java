@@ -58,7 +58,7 @@ public class Library {
 
 
 
-        String input = "[()]{}{[()()]()}" ;
+        String input = "[{}]{}{}" ;
 
         System.out.println(BracketValidator.validator(input));
 

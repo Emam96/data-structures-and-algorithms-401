@@ -185,7 +185,7 @@ Creating a bracket validator using stack.
 <!-- Embedded whiteboard image -->
 
 
-![valid](https://i.imgur.com/0oqmSpr.jpeg)
+![valid](https://i.imgur.com/oNGiaBj.jpeg)
 
 
 ## Solution
