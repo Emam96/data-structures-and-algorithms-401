@@ -20,15 +20,15 @@ public class AnimalShelter {
         }
     }
 
-    public String deqDog(){
+    private String deqDog(){
         return "The oldest poor dog ===> " + dogs.dequeue();
     }
 
-    public String deqCat(){
+    private String deqCat(){
         return "The oldest poor cat===>  " + cats.dequeue();
     }
 
-    public String deqAny(){
+    private String deqAny(){
         if(cats.isEmpty()){
             return deqDog();
         }
@@ -44,6 +44,23 @@ public class AnimalShelter {
         }
 
     }
+
+    public String dequeue(String pref){
+
+        if (pref == "dog") {
+          return  deqDog();
+
+        }
+        else if (pref == "cat") {
+            return deqCat();
+        } else {
+
+            return deqAny();
+        }
+
+    }
+
+
 
 
 

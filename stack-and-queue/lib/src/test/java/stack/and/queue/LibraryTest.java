@@ -195,7 +195,7 @@ class LibraryTest {
         shop.enq("fish");
         shop.enq("Emam");
 
-        String msg = shop.deqCat();
+        String msg = shop.dequeue("cat");
 //        System.out.println(shop.deqCat());
         assertEquals("The oldest poor cat===>  cat", msg);
 
@@ -208,8 +208,8 @@ class LibraryTest {
 
 
         shop.enq("fish");
-        String msg = shop.deqCat();
-        System.out.println(shop.deqCat());
+        String msg = shop.dequeue("cat");
+        System.out.println(shop.dequeue("cat"));
         assertEquals("The oldest poor cat===>  Queue is empty", msg);
 
     }

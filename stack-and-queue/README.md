@@ -111,7 +111,7 @@ The shelter operates using a first-in, first-out approach.
 
 ## Whiteboard Process
 
-![animal](https://github.com/Emam96/data-structures-and-algorithms-401/blob/main/assests/cc12.jpg?raw=true)
+![animal](https://i.imgur.com/AMPaERI.jpeg)
 
 ## Approach & Efficiency
 
