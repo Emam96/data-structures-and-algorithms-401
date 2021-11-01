@@ -68,3 +68,46 @@ Recursive call is happening. The every node is processed once and considering th
             if (rres > res)
                 res = rres;
             return res;
+
+
+
+
+# Challenge 17
+
+
+Breadth-first Traversal For a binary tree.
+
+## Whiteboard Process
+
+![brdtth](https://i.imgur.com/GwSaew1.jpeg)
+
+
+## Approach & Efficiency
+
+Time Complexity: O(n) where n is the number of nodes in the binary tree
+Space Complexity: O(n) where n is the number of nodes in the binary tree
+
+## Solution
+
+     public static  Queue<Integer> breadthFirst(BinaryTree tree) {
+    Queue<Node> queue = new LinkedList<>() ;
+     Queue<Integer> list = new LinkedList<>() ;
+        if (tree.root == null)
+     return null;
+       queue.clear();
+        queue.add(tree.root);
+          list.add(tree.root.value);
+        while(!queue.isEmpty()){
+       Node node = queue.remove();
+
+            if(node.left != null){
+                queue.add(node.left);
+            list.add(node.left.value);
+            }
+            if(node.right != null) {
+                queue.add(node.right);
+            list.add(node.right.value);
+            }
+             }
+             return list;
+                 }

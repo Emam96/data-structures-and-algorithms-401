@@ -3,6 +3,9 @@
  */
 package trees;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Library {
     public static void main(String[] args)
     {
@@ -16,14 +19,56 @@ public class Library {
 //        tree.add(5);
 //        tree.add(75);
 
+
+        tree.add(20);
+        tree.add(60);
+        tree.add(80);
+        tree.add(30);
+        tree.add(90);
+        tree.add(45);
+
+//       tree.root = new Node(1);
+//        tree.root.left = new Node(2);
+//        tree.root.right = new Node(3);
+//        tree.root.left.left = new Node(4);
+//        tree.root.left.right = new Node(5);
+
         System.out.println(tree.preOrder(tree.root));
         System.out.println(tree.inOrder(tree.root));
         System.out.println(tree.postOrder(tree.root));
+//
+//
+//        System.out.println(tree.max());
 
 
-        System.out.println(tree.max());
+//        System.out.println( breadthFirst(tree));
+
+
+    }
 
 
 
+
+     public static  Queue<Integer> breadthFirst(BinaryTree tree) {
+        Queue<Node> queue = new LinkedList<>() ;
+        Queue<Integer> list = new LinkedList<>() ;
+        if (tree.root == null)
+            return null;
+        queue.clear();
+        queue.add(tree.root);
+        list.add(tree.root.value);
+        while(!queue.isEmpty()){
+            Node node = queue.remove();
+
+            if(node.left != null){
+                queue.add(node.left);
+            list.add(node.left.value);
+            }
+            if(node.right != null) {
+                queue.add(node.right);
+            list.add(node.right.value);
+            }
+        }
+       return list;
     }
 }

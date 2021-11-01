@@ -3,6 +3,7 @@ package trees;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class BinaryTree <T> {
 
@@ -76,6 +77,27 @@ public class BinaryTree <T> {
         }
         return list;
     }
+
+
+
+
+
+//    ALGORITHM breadthFirst(root)
+// INPUT  <-- root node
+// OUTPUT <-- front node of queue to console
+
+//    Queue breadth <-- new Queue()
+//  breadth.enqueue(root)
+
+//            while breadth.peek()
+//    node front = breadth.dequeue()
+//    OUTPUT <-- front.value
+//
+//    if front.left is not NULL
+//      breadth.enqueue(front.left)
+//
+//            if front.right is not NULL
+//      breadth.enqueue(front.right)
 
 
 //    void printPostorder() {

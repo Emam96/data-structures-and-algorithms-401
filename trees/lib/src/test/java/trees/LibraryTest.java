@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Queue;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -107,5 +108,39 @@ class LibraryTest {
         assertEquals(8, max);
     }
 
+
+    @Test void testBreadthFirstHappyPath() {
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.add(5);
+        tree.add(2);
+        tree.add(8);
+        tree.add(9);
+
+        Queue<Integer> expected= Library.breadthFirst(tree);
+        System.out.println(Library.breadthFirst(tree));
+        assertEquals("[5, 2, 8, 9]", expected.toString());
+    }
+
+    @Test void testBreadthFirstFailure() {
+        BinarySearchTree tree = new BinarySearchTree();
+//        tree.add(5);
+//        tree.add(2);
+//        tree.add(8);
+//        tree.add(9);
+
+        Queue<Integer> expected= Library.breadthFirst(tree);
+        System.out.println(Library.breadthFirst(tree));
+        assertEquals(null, expected);
+    }
+
+
+    @Test void testBreadthFirstEdgeCase() {
+        BinarySearchTree tree = new BinarySearchTree();
+        tree.add(5);
+
+        Queue<Integer> expected= Library.breadthFirst(tree);
+        System.out.println(Library.breadthFirst(tree));
+        assertEquals("[5]", expected.toString());
+    }
 
 }
