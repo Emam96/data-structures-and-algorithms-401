@@ -1,6 +1,9 @@
 package trees;
 
-public class BinarySearchTree extends  BinaryTree {
+import java.util.ArrayList;
+import java.util.List;
+
+public class BinarySearchTree <T> extends  BinaryTree {
 
 
 
@@ -11,12 +14,12 @@ public class BinarySearchTree extends  BinaryTree {
     ////////////////////////////////////////////////////////////////////////////////
 
 
-    private Node addToTree(Node current, int value) {
+    private Node addToTree(Node<Integer> current, int value) {
         if (current == null) {
             return new Node(value);
         }
 
-        if (value < current.value) {
+        if ( value <  current.value) {
             current.left = addToTree(current.left, value);
         } else if (value > current.value) {
             current.right = addToTree(current.right, value);
@@ -35,7 +38,7 @@ public class BinarySearchTree extends  BinaryTree {
     //////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////
 
-    private boolean containsNode(Node current, int value) {
+    private boolean containsNode(Node<Integer> current, int value) {
         if (current == null) {
             return false;
         }
@@ -55,7 +58,7 @@ public class BinarySearchTree extends  BinaryTree {
     //////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////
 
-    private int findMax(Node node)
+    private int findMax(Node<Integer> node)
     {
         if (node == null) {
             System.out.println("Tree is empty");
@@ -79,6 +82,10 @@ public int max(){
   return   findMax(root);
 
 }
+
+    //////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////
+
 
 
 

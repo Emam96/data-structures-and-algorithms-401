@@ -2,21 +2,21 @@ package trees;
 
 public class Node <T> {
 
-    int value;
+    T value;
     Node left;
     Node right;
 
-    Node(int value) {
+    Node(T value) {
         this.value = value;
         right = null;
         left = null;
     }
 
-    public int getValue() {
+    public T getValue() {
         return value;
     }
 
-    public void setValue(int value) {
+    public void setValue(T value) {
         this.value = value;
     }
 

@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 
-class LibraryTest {
+class LibraryTest <T> {
 
 
     @Test void emptyTreeTest() {
@@ -36,8 +36,8 @@ class LibraryTest {
         tree.add(2);
         tree.add(8);
 
-       assertTrue(tree.root.left.value == 2);
-        assertTrue(tree.root.right.value == 8);
+       assertTrue( (int) tree.root.left.value == 2);
+        assertTrue( (int)tree.root.right.value == 8);
 
     }
 
@@ -142,5 +142,21 @@ class LibraryTest {
         System.out.println(Library.breadthFirst(tree));
         assertEquals("[5]", expected.toString());
     }
+
+
+    @Test void testFizz() {
+        BinarySearchTree treeio = new BinarySearchTree();
+        treeio.add(50);
+        treeio.add(1);
+        treeio.add(2);
+
+
+
+        BinaryTree newTree =  FizzBuzzTree.fizzBuzzTree(treeio);
+
+        List expected= newTree.inOrder(newTree.root);
+        assertEquals("[1, 2, Buzz]", expected.toString());
+    }
+
 
 }

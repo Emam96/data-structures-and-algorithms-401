@@ -111,3 +111,43 @@ Space Complexity: O(n) where n is the number of nodes in the binary tree
              }
              return list;
                  }
+
+
+
+
+# Challenge 18
+
+Conduct “FizzBuzz” on a binaryTree while traversing through it. Change the values of each of the nodes dependent on the current node’s value
+
+## Whiteboard Process
+
+![tree](https://i.imgur.com/gv8jcza.jpeg)
+
+## Approach & Efficiency
+
+- Write a function called FizzBuzzTree which takes a binaryTree as an argument.
+- Without utilizing any of the built-in methods available to your language, determine weather or not the value of each
+  node is divisible by 3, 5 or both, and change the value of each of the nodes:
+  - If the value is divisible by 3, replace the value with “Fizz”
+  - If the value is divisible by 5, replace the value with “Buzz”
+  - If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+    Return the binaryTree with its new values.
+
+For explicitly-typed languages: Ensure your node values are of type Object, to hold either strings or integers.
+
+## Solution
+
+      private static void fizzProcess(Node current) {
+         if (current != null) {
+           fizzProcess(current.left);
+         if ((Integer)current.value % 15 == 0) {
+           current.value="FizzBuzz";
+           } else if ((Integer)current.value % 5 == 0) {
+          current.value="Buzz";
+          } else if ((Integer)current.value % 3 == 0) {
+          current.value="Fizz";
+          }
+          System.out.println(current.value);
+         fizzProcess(current.right);
+          }
+           }

@@ -8,7 +8,7 @@ import java.util.Queue;
 public class BinaryTree <T> {
 
 
-    Node root;
+    Node<T> root;
 
     BinaryTree()
     {
@@ -33,11 +33,11 @@ public class BinaryTree <T> {
 
     }
 
-    public List<Integer> preOrder(Node node) {
-     List<Integer> list = new ArrayList<>();
+    public List<T> preOrder(Node node) {
+     List<T> list = new ArrayList<>();
         if (node != null) {
 //            System.out.print(" " + node.value);
-            list.add(node.value);
+            list.add((T) node.value);
 
             if (node.left != null)
                 list.addAll(preOrder(node.left));
@@ -49,16 +49,16 @@ public class BinaryTree <T> {
 //            preOrder(node.right);
 
         }
-            return list;
+            return  list;
     }
 
 
-    public List<Integer> inOrder(Node node) {
-        List<Integer> list = new ArrayList<>();
+    public List<T> inOrder(Node node) {
+        List<T> list = new ArrayList<>();
         if (node != null) {
             if (node.left != null)
                 list.addAll(preOrder(node.left));
-            list.add(node.value);
+            list.add((T) node.value);
             if (node.right != null)
                 list.addAll(preOrder(node.right));
         }
@@ -66,14 +66,14 @@ public class BinaryTree <T> {
     }
 
 
-    public List<Integer> postOrder(Node node) {
-        List<Integer> list = new ArrayList<>();
+    public List<T> postOrder(Node node) {
+        List<T> list = new ArrayList<>();
         if (node != null) {
             if (node.left != null)
                 list.addAll(preOrder(node.left));
             if (node.right != null)
                 list.addAll(preOrder(node.right));
-            list.add(node.value);
+            list.add((T) node.value);
         }
         return list;
     }

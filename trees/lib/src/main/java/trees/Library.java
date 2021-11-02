@@ -4,71 +4,65 @@
 package trees;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
-public class Library {
-    public static void main(String[] args)
-    {
-
-        BinarySearchTree tree = new BinarySearchTree();
+public class Library <T> {
+    public static void main(String[] args) {
 
 
-//        tree.add(50);
-//        tree.add(10);
-//        tree.add(60);
-//        tree.add(5);
-//        tree.add(75);
+        BinarySearchTree treeio = new BinarySearchTree();
+        treeio.add(50);
+        treeio.add(1);
+        treeio.add(2);
+        treeio.add(3);
+        treeio.add(12);
+        treeio.add(33);
+        treeio.add(10);
+        treeio.add(66);
+        treeio.add(70);
+        treeio.add(5);
+        treeio.add(11);
+        treeio.add(36);
+        treeio.add(88);
+
+        System.out.println(treeio.postOrder(treeio.root));
+
+        System.out.println(breadthFirst(treeio));
 
 
-        tree.add(20);
-        tree.add(60);
-        tree.add(80);
-        tree.add(30);
-        tree.add(90);
-        tree.add(45);
+      BinaryTree newTree =  FizzBuzzTree.fizzBuzzTree(treeio);
 
-//       tree.root = new Node(1);
-//        tree.root.left = new Node(2);
-//        tree.root.right = new Node(3);
-//        tree.root.left.left = new Node(4);
-//        tree.root.left.right = new Node(5);
-
-        System.out.println(tree.preOrder(tree.root));
-        System.out.println(tree.inOrder(tree.root));
-        System.out.println(tree.postOrder(tree.root));
-//
-//
-//        System.out.println(tree.max());
-
-
-//        System.out.println( breadthFirst(tree));
-
+        System.out.println(newTree.inOrder(newTree.root));
 
     }
 
 
-
-
-     public static  Queue<Integer> breadthFirst(BinaryTree tree) {
-        Queue<Node> queue = new LinkedList<>() ;
-        Queue<Integer> list = new LinkedList<>() ;
+    public static Queue<Integer> breadthFirst(BinaryTree tree) {
+        Queue<Node> queue = new LinkedList<>();
+        Queue<Integer> list = new LinkedList<>();
         if (tree.root == null)
             return null;
         queue.clear();
         queue.add(tree.root);
-        list.add(tree.root.value);
-        while(!queue.isEmpty()){
+        list.add((int) tree.root.value);
+        while (!queue.isEmpty()) {
             Node node = queue.remove();
 
-            if(node.left != null){
+            if (node.left != null) {
                 queue.add(node.left);
-            list.add(node.left.value);
+                list.add((int) node.left.value);
             }
-            if(node.right != null) {
+            if (node.right != null) {
                 queue.add(node.right);
-            list.add(node.right.value);
+                list.add((int) node.right.value);
             }
         }
-       return list;
+        return list;
+
     }
-}
+
+
+
+
+    }
