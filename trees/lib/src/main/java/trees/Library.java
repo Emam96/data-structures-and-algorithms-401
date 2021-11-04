@@ -10,30 +10,30 @@ import java.util.Queue;
 public class Library <T> {
     public static void main(String[] args) {
 
-
-        BinarySearchTree treeio = new BinarySearchTree();
-        treeio.add(50);
-        treeio.add(1);
-        treeio.add(2);
-        treeio.add(3);
-        treeio.add(12);
-        treeio.add(33);
-        treeio.add(10);
-        treeio.add(66);
-        treeio.add(70);
-        treeio.add(5);
-        treeio.add(11);
-        treeio.add(36);
-        treeio.add(88);
-
-        System.out.println(treeio.postOrder(treeio.root));
-
-        System.out.println(breadthFirst(treeio));
-
-
-      BinaryTree newTree =  FizzBuzzTree.fizzBuzzTree(treeio);
-
-        System.out.println(newTree.inOrder(newTree.root));
+//
+//        BinarySearchTree treeio = new BinarySearchTree();
+//        treeio.add(50);
+//        treeio.add(1);
+//        treeio.add(2);
+//        treeio.add(3);
+//        treeio.add(12);
+//        treeio.add(33);
+//        treeio.add(10);
+//        treeio.add(66);
+//        treeio.add(70);
+//        treeio.add(5);
+//        treeio.add(11);
+//        treeio.add(36);
+//        treeio.add(88);
+//
+//        System.out.println(treeio.postOrder(treeio.root));
+//
+//        System.out.println(breadthFirst(treeio));
+//
+//
+//      BinaryTree newTree =  FizzBuzzTree.fizzBuzzTree(treeio);
+//
+//        System.out.println(newTree.inOrder(newTree.root));
 
     }
 
