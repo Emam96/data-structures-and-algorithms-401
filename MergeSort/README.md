@@ -7,6 +7,8 @@ Merge Sort is the act of sorting a list of items by breaking the collection into
 
 ![mrge](https://i.imgur.com/m9WYYUA.jpeg)
 
+
+ [BLOG](BLOG.md)
 ## Approach & Efficiency
 
 - It takes 2 loops to perform an insertion sort which leaves it at an O(n<sub>log n</sub>) time complexity.
@@ -52,3 +54,7 @@ int[] r = new int[a.length - mid];
             a[k++] = r[j++];
         }
     }
+
+
+
+
