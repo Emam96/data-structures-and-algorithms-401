@@ -4,11 +4,24 @@
 package quicksort;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
-    @Test void someLibraryMethodReturnsTrue() {
-        Library classUnderTest = new Library();
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+
+    @Test
+    public void testQuickSort() {
+
+        int[] arr = {8, 4, 23, 42, 16, 15};
+        int n = arr.length;
+        Library.quickSort(arr, 0, n - 1);
+        int[] expArr = {4, 8, 15, 16, 23, 42};
+        int[] sortedArr = Library.printToTest(arr);
+        assertArrayEquals(expArr,sortedArr);
     }
+
+
 }
