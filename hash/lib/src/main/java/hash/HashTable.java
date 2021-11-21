@@ -22,12 +22,11 @@ public class HashTable<K, V> {
 
 
 
+
     public void add(K key, V value) {
         int bucketIndex = hash(key);
         Bucket head = bucketArray.get(bucketIndex);
 
-
-        // handling collisions
         while (head != null) {
             if (head.key.equals(key)) {
                 head.value = value;
@@ -62,6 +61,16 @@ public class HashTable<K, V> {
 
 
 
+    public void getSize() {
+
+        System.out.println( bucketArray.size());
+
+    }
+
+
+
+
+
     public V get(K key) {
         int bucketIndex = hash(key);
         Bucket head = bucketArray.get(bucketIndex);
@@ -74,6 +83,8 @@ public class HashTable<K, V> {
         System.out.println("No data found");
         return null;
     }
+
+
 
 
 
@@ -94,8 +105,7 @@ public class HashTable<K, V> {
 
 
     public int hash(K key) {
-        int hashCode = key.hashCode();
-        return hashCode % numBuckets;
+        return (Math.abs(key.hashCode())) % bucketArray.size();
     }
 
 

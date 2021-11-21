@@ -38,6 +38,42 @@ class LibraryTest {
 
 
 
+    // 4 and 5
+    @Test
+    public void collisionTest() {
+
+        HashTable table = new HashTable();
+
+        // 10 and  100 have the  same hash value of 0
+
+        table.add(10, 36);
+        table.add(100, 20);
+
+
+       // if the value for the key 10 returned as null, it means that the collisions are not handled.
+
+        assertFalse(table.get(10) == null);
+    }
+
+
+
+
+    @Test
+    public void hashTest() {
+
+        HashTable table = new HashTable();
+
+        // my list size is 10
+
+       int hashValue = table.hash(50);
+
+        //  let's test if the hashed value will be smaller than 10.
+
+        assertTrue(hashValue < 10);
+
+    }
+
+
 
 
 }
