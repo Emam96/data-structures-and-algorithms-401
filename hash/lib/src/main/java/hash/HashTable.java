@@ -80,7 +80,7 @@ public class HashTable<K, V> {
             }
             head = head.next;
         }
-        System.out.println("No data found");
+
         return null;
     }
 
@@ -97,7 +97,7 @@ public class HashTable<K, V> {
             }
             head = head.next;
         }
-        System.out.println("No data found");
+
         return false;
     }
 
