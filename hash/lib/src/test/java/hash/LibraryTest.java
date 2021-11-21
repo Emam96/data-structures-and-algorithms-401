@@ -74,6 +74,32 @@ class LibraryTest {
     }
 
 
+    @Test
+    public void wordHappyPath() {
 
+        String exp = "Once upon a time, there was a brave princess who...";
+        String result =  Library.repeatedWord(exp);
+        assertEquals("a", result);
+
+    }
+
+    @Test
+    public void wordFail() {
+
+        String exp = "Once upon a time, there was  brave princess who...";
+        String result =  Library.repeatedWord(exp);
+        assertEquals("no repeated words", result);
+
+    }
+
+
+    @Test
+    public void wordEdgeCase() {
+
+        String exp = "";
+        String result =  Library.repeatedWord(exp);
+        assertEquals("no repeated words", result);
+
+    }
 
 }
