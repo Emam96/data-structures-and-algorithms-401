@@ -4,6 +4,9 @@
 package hash;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
@@ -74,6 +77,8 @@ class LibraryTest {
     }
 
 
+    ////////////////////////////////////////////////////////////////////////////////// Repeated word
+
     @Test
     public void wordHappyPath() {
 
@@ -101,5 +106,32 @@ class LibraryTest {
         assertEquals("no repeated words", result);
 
     }
+
+    //////////////////////////////////////////////////////////////////////////////////////////// Tree
+
+
+    @Test
+    public void treeTest() {
+
+        Tree tree = new Tree();
+        tree.add(50);
+        tree.add(1);
+        tree.add(2);
+
+
+        Tree tree2 = new Tree();
+        tree2.add(88);
+        tree2.add(1);
+        tree2.add(2);
+
+        List re = TreeIntersection.treeIntersection(tree, tree2);
+
+        // There are two common values, so the size should equal 2.
+
+        assertTrue(re.size() == 2);
+
+
+    }
+
 
 }

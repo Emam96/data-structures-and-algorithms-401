@@ -10,20 +10,53 @@ public class Library {
     public static void main(String args[])
     {
 
-        HashTable table = new HashTable();
+//        HashTable table = new HashTable();
+//
+//        table.add(10, 36);
+//        table.add(20, 20);
+//        table.add(30, 16);
+//
+//
+//
+//
+//        System.out.println( table.bucketArray.toArray().toString());
 
-        table.add(10, 36);
-
-        table.add(100, 20);
-
-
-        System.out.println(table.get(10));
-        System.out.println(table.get(100));
 
 
 
-        String exp = "Once upon a time, there was a brave princess who...";
-        System.out.println( repeatedWord(exp));
+//        System.out.println(table);
+
+//        System.out.println(table.get(10));
+//        System.out.println(table.get(100));
+
+
+
+//        String exp = "Once upon a time, there was a brave princess who...";
+//        System.out.println( repeatedWord(exp));
+
+
+
+
+//
+        Tree tree = new Tree();
+        tree.add(50);
+        tree.add(1);
+        tree.add(2);
+        tree.add(3);
+        tree.add(6);
+
+
+        Tree tree2 = new Tree();
+        tree2.add(88);
+        tree2.add(1);
+        tree2.add(22);
+        tree2.add(3);
+        tree2.add(6);
+
+
+
+
+        System.out.println(TreeIntersection.treeIntersection(tree, tree2));
 
 
     }

@@ -1,12 +1,14 @@
 package hash;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Scanner;
 
 public class HashTable<K, V> {
 
 
     private static final double loadThreshold = 0.7;
-    private ArrayList<Bucket> bucketArray;
+    public ArrayList<Bucket> bucketArray;
 
     private int numBuckets;
     private int size;
@@ -107,6 +109,8 @@ public class HashTable<K, V> {
     public int hash(K key) {
         return (Math.abs(key.hashCode())) % bucketArray.size();
     }
+
+
 
 
 
