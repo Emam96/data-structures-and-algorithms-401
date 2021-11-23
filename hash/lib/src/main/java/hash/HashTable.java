@@ -1,8 +1,7 @@
 package hash;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Scanner;
+
 
 public class HashTable<K, V> {
 
@@ -13,7 +12,7 @@ public class HashTable<K, V> {
     private int numBuckets;
     private int size;
     public HashTable() {
-        bucketArray = new ArrayList<>();
+          bucketArray = new ArrayList<>();
         numBuckets = 10;
         size = 0;
 
@@ -106,8 +105,10 @@ public class HashTable<K, V> {
 
 
 
-    public int hash(K key) {
-        return (Math.abs(key.hashCode())) % bucketArray.size();
+    public int hash( K key) {
+
+            return (Math.abs(key.hashCode())) % bucketArray.size();
+
     }
 
 

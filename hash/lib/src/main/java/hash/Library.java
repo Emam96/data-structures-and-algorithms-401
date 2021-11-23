@@ -1,7 +1,10 @@
 
 package hash;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.regex.Pattern;
 
 public class Library {
@@ -10,53 +13,21 @@ public class Library {
     public static void main(String args[])
     {
 
-//        HashTable table = new HashTable();
-//
-//        table.add(10, 36);
-//        table.add(20, 20);
-//        table.add(30, 16);
-//
-//
-//
-//
-//        System.out.println( table.bucketArray.toArray().toString());
+        HashTable table = new HashTable();
+
+        table.add("one", "36");
+        table.add("two", "20");
+        table.add("three", "16");
 
 
+        HashTable table2 = new HashTable();
+
+        table2.add("one", "22");
+        table2.add("two", "44");
+        table2.add("three", "66");
 
 
-//        System.out.println(table);
-
-//        System.out.println(table.get(10));
-//        System.out.println(table.get(100));
-
-
-
-//        String exp = "Once upon a time, there was a brave princess who...";
-//        System.out.println( repeatedWord(exp));
-
-
-
-
-//
-        Tree tree = new Tree();
-        tree.add(50);
-        tree.add(1);
-        tree.add(2);
-        tree.add(3);
-        tree.add(6);
-
-
-        Tree tree2 = new Tree();
-        tree2.add(88);
-        tree2.add(1);
-        tree2.add(22);
-        tree2.add(3);
-        tree2.add(6);
-
-
-
-
-        System.out.println(TreeIntersection.treeIntersection(tree, tree2));
+        System.out.println( table.get("one"));
 
 
     }
@@ -102,6 +73,25 @@ public class Library {
         return "no repeated words";
     }
 
+
+
+
+
+    public static List<String> leftJoin(HashMap h1, HashMap h2){
+
+        List<String> list = new ArrayList<>();
+        for(Object k : h1.keySet()){
+            if(h1.containsKey(k)){
+                list.add(k +  ": " + h1.get(k)+ ", " + h2.get(k));
+            } else{
+                list.add(k + ": " + h1.get(k) + ", " + null);
+            }
+        }
+
+        return list;
+
+
+    }
 
 
 
