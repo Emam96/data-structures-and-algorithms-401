@@ -8,7 +8,7 @@
 
 ## Whiteboard Process
 
-![word](https://i.imgur.com/l49ZsjC.jpeg)
+![word](https://i.imgur.com/ZfkzDEx.jpeg)
 
 ## Approach & Efficiency
 
