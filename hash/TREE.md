@@ -4,7 +4,7 @@ Find common values in 2 binary trees using hash table.
 
 ## Whiteboard Process
 
-![tree](https://i.imgur.com/e03ZEri.jpeg)
+![tree](https://i.imgur.com/dIQqF4r.png)
 
 ## Approach & Efficiency
 
