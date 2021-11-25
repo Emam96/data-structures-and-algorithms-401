@@ -8,7 +8,8 @@ This directory includes two classes, one for a bucket in the table and one for t
 
 ## Approach & Efficiency
 
-Hash table lookups are O(1) in the average case, and O(n) in the worst case.
+- Hash table lookups are O(1) searching for the element takes the same amount of time as searching for the first element of an array, which is a constant time in the average case, However, if our dataset is bigger than the hash table collisions occur and we need to deal with them using different methods, O(n) in the worst case.
+-The space complexity of every  hash table is O(n), the datastructure always fill constant space no matter how many elements it contains.
 
 ## API
 
