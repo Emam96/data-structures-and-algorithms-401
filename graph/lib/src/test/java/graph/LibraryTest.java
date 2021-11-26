@@ -119,43 +119,7 @@ class LibraryTest {
         assertEquals( 7,  graph.getSize());
     }
 
-    @Test
-    public void test_bfs(){
-        Graph graph = new Graph();
-        Node cat = graph.addNode("cat");
-        Node dog = graph.addNode("dog");
-        Node hamster = graph.addNode("hamster");
-
-        cat.addNeighbor(dog, 20);
-        cat.addNeighbor(hamster, 40);
-
-        LinkedList<Node> expected = new LinkedList<>();
-        expected.add(cat);
-        expected.add(hamster);
-        expected.add(dog);
-
-        assertEquals( expected, graph.breadthFirstSearch(cat));
-    }
-
-
-
-    @Test
-    public void test_dfs(){
-        Graph graph = new Graph();
-        Node cat = graph.addNode("cat");
-        Node dog = graph.addNode("dog");
-        Node hamster = graph.addNode("hamster");
-
-        cat.addNeighbor(dog, 20);
-        cat.addNeighbor(hamster, 40);
-
-        LinkedList<Node> expected = new LinkedList<>();
-        expected.add(cat);
-        expected.add(dog);
-        expected.add(hamster);
-
-        assertEquals( expected, graph.depthFirstSearch(cat));
-    }
+    
 
 
 }
