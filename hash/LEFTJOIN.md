@@ -6,6 +6,11 @@ Implement a simplified LEFT JOIN for 2 Hashmaps.
 
 Write a function that LEFT JOINs two hashmaps into a single data structure.
 
+
+## WhitBoard
+ 
+![left](https://i.imgur.com/NjrhmK7.jpeg)
+
 ## Approach & Efficiency
 
 Create a method that accepts 2 hash maps as a parameter. Declare a list and iterate through each hashmap and compare
