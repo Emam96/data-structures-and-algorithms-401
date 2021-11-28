@@ -43,7 +43,34 @@ public class Graph<T> {
     }
 
 
+/////////////////////////////////////////////////////BREADTH
 
+    @SuppressWarnings("unchecked")
+    public static LinkedList<Node> breadthFirstSearch(Node start){
+        LinkedList resultList = new LinkedList();
+        HashSet<Node> visited = new HashSet<>();
+
+        if(start == null){
+            throw new NullPointerException("Cannot be null");
+        }
+
+        Queue queue  = new LinkedList();
+        queue.add(start);
+        visited.add(start);
+
+        while(!queue.isEmpty()){
+            Node tempNode = (Node) queue.remove();
+            resultList.add(tempNode);
+
+            for(Edge neighbor: (HashSet<Edge>) tempNode.neighbors){
+                if(!visited.contains(neighbor.node)){
+                    queue.add(neighbor.node);
+                    visited.add(neighbor.node);
+                }
+            }
+        }
+        return resultList;
+    }
 
 
 }
