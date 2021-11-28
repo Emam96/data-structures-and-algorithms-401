@@ -17,9 +17,7 @@ Create a method that accepts 2 hash maps as a parameter. Declare a list and iter
 the keys if it matches. If each hash map has the same key, then add the key and values to the list, otherwise add to
 list with the second hash map value to null.
 
-Time | Space
---- | ---
-O(m+n) | O(n)
+the big O notation of the function is : time complexity = O(n) because we use a loop. space complexity = O(n) because we declared a List.
 
 ## Solution
 
