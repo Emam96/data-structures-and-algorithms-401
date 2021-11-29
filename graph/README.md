@@ -1,26 +1,43 @@
 # Graphs
 
 ## Challenge
+
 Implement the Graph Class
 
+<hr>
+
 ## Approach & Efficiency
+
 To implement the Graph and node class. Created instance methods for the Graph class: addNode(), addEdge()
 , getNodes(), getNeighbors(), size().
 
+***addNode()***
+
+Time complexity is O(V) time. where V is the number of vertices in the graph.
+
+***addEdge()***
+
+Finding that edge would take O(V) time, where V is the number of vertices in the graph.
+
+***getNodes()***
+
+o(1) because we are using a hashset to get items.
+
+***getNeighbors()***
+
+o(1) because we are using a hashset to get items.
+
+<hr>
 
 ## API
 
 ***addNode()*** 
-
-Time complexity is O(V) time. where V is the number of vertices in the graph.
 
 - Adds a new node to the graph
 - Takes in the value of that node
 - Returns the added node
 
 ***addEdge()*** 
-
-Finding that edge would take O(V) time, where V is the number of vertices in the graph.
 
 - Adds a new edge between two nodes in the graph
 - Include the ability to have a “weight”
@@ -29,12 +46,9 @@ Finding that edge would take O(V) time, where V is the number of vertices in the
 
 ***getNodes()*** 
 
-  o(1) because we are using a hashset to get items.
 - Returns all the nodes in the graph as a collection (set, list, or similar)
 
 ***getNeighbors()*** 
-
-o(1) because we are using a hashset to get items.
 
 - Returns a collection of nodes connected to the given node
 - Takes in a given node
@@ -42,10 +56,9 @@ o(1) because we are using a hashset to get items.
 
 ***size()*** 
 
-
-
 - Returns the total number of nodes in the graph
 
+<hr>
 
 ***Test***
 
