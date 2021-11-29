@@ -10,30 +10,39 @@ To implement the Graph and node class. Created instance methods for the Graph cl
 
 ## API
 
-***addNode()*** S: O(|v| + |e|) T: O(1)
+***addNode()*** 
+
+Time complexity is O(V) time. where V is the number of vertices in the graph.
 
 - Adds a new node to the graph
 - Takes in the value of that node
 - Returns the added node
 
-***addEdge()*** S: O(|v| + |e|) T: O(1)
+***addEdge()*** 
+
+Finding that edge would take O(V) time, where V is the number of vertices in the graph.
 
 - Adds a new edge between two nodes in the graph
 - Include the ability to have a “weight”
 - Takes in the two nodes to be connected by the edge
 - Both nodes should already be in the Graph
 
-***getNodes()*** S: O(v) T: O(v)
+***getNodes()*** 
 
+  o(1) because we are using a hashset to get items.
 - Returns all the nodes in the graph as a collection (set, list, or similar)
 
-***getNeighbors()*** S: O(e) T: O(e)
+***getNeighbors()*** 
+
+o(1) because we are using a hashset to get items.
 
 - Returns a collection of nodes connected to the given node
 - Takes in a given node
 - Include the weight of the connection in the returned collection
 
-***size()*** S: O(v) T: O(v)
+***size()*** 
+
+
 
 - Returns the total number of nodes in the graph
 
