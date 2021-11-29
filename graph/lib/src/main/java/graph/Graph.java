@@ -17,22 +17,55 @@ public class Graph<T> {
         return node;
     }
 
-    public boolean addEdge(Node<T> source, Node<T> destination){
-        if(this.vertices.contains(source) && this.vertices.contains(destination)){
-            this.vertices.add(source);
-            this.vertices.add(destination);
-            return true;
+//    public boolean addEdge(Node<T> source, Node<T> destination){
+//        if(this.vertices.contains(source) && this.vertices.contains(destination)){
+//            this.vertices.add(source);
+//            this.vertices.add(destination);
+//            return true;
+//        }
+//        return false;
+//    }
+
+
+
+    public void addEdge( T value1, T value2, int weight) {
+        if( isNodeExist(value1) && isNodeExist(value2)){
+            Node node1 = getNode(value1);
+            Node node2 = getNode(value2);
+//            Edge neighborForNode1 = new Edge(node2,weight);
+//            Edge neighborForNode2 = new Edge(node1,weight);
+            node1.addNeighbor(node2,weight);
+            node2.addNeighbor(node1,weight);
         }
-        return false;
+    }
+    private boolean isNodeExist(T value){
+        Node node1 = getNode(value);
+        return vertices.contains(node1);
     }
 
-    public void getEdges(String[] input){
-
-    }
 
     public HashSet<Node<T>>getNodes(){
         return this.vertices;
     }
+
+    public Node getNode(T value) {
+
+        Node arr[] = new Node[vertices.size()];
+        int n=0;
+        for(Node ele:vertices){
+            arr[n++] = ele;
+        }
+        for(int i = 0 ; i < arr.length -1; i++) {
+          if (arr[i].data == value) {
+              return arr[i];
+          }
+        }
+return null;
+    }
+
+
+
+
 
     public HashSet<Edge> getNeighbors(Node<T> node){
         return node.neighbors;
