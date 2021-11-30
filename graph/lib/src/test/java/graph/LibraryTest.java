@@ -24,7 +24,6 @@ class LibraryTest {
         Node cat = graph.addNode("cat");
         Node dog = graph.addNode("dog");
         Node hamster = graph.addNode("hamster");
-
         assertTrue( graph.getSize() == 3);
         assertTrue( graph.getNodes().contains(cat));
         assertTrue( graph.getNodes().contains(dog));
@@ -49,12 +48,10 @@ class LibraryTest {
         Node cat = graph.addNode("cat");
         Node dog = graph.addNode("dog");
         Node hamster = graph.addNode("hamster");
-
         HashSet<Node> expected = new HashSet<>();
         expected.add(cat);
         expected.add(dog);
         expected.add(hamster);
-
         assertTrue( graph.getNodes().equals(expected));
     }
 
@@ -64,7 +61,6 @@ class LibraryTest {
         Node cat = graph.addNode("cat");
         Node dog = graph.addNode("dog");
         Node hamster = graph.addNode("hamster");
-
         assertTrue( cat.addNeighbor(dog));
     }
 
@@ -74,7 +70,6 @@ class LibraryTest {
         Node cat = graph.addNode("cat");
         Node dog = graph.addNode("dog");
         Node hamster = graph.addNode("hamster");
-
         assertTrue( cat.addNeighbor(dog, 50));
     }
 
@@ -86,13 +81,9 @@ class LibraryTest {
         Node hamster = graph.addNode("hamster");
         cat.addNeighbor(hamster);
         cat.addNeighbor(dog);
-
-
         HashSet expected = new HashSet<>();
         expected.add("hamster");
         expected.add("dog");
-
-
         assertEquals(expected.size(), graph.getNeighbors(cat).size());
 //        assertEquals("Should equal", expected.toString().trim(), graph.getNeighbors(cat).toString().trim());
     }
@@ -103,14 +94,11 @@ class LibraryTest {
         graph.addNode("cat");
         graph.addNode("dog");
         graph.addNode("hamster");
-
         assertEquals( 3,  graph.getSize());
-
         graph.addNode("rabbit");
         graph.addNode("frog");
         graph.addNode("guinea pig");
         graph.addNode("cow");
-
         assertEquals( 7,  graph.getSize());
     }
 
@@ -121,18 +109,30 @@ public void test_bfs(){
     Node cat = graph.addNode("cat");
     Node dog = graph.addNode("dog");
     Node hamster = graph.addNode("hamster");
-
     cat.addNeighbor(dog, 20);
     cat.addNeighbor(hamster, 40);
-
     LinkedList<Node> expected = new LinkedList<>();
     expected.add(cat);
     expected.add(hamster);
     expected.add(dog);
-
     assertEquals( expected, graph.breadthFirstSearch(cat));
 }
 
+////////////////////////////////////////////////////////////////////DEPTH
 
+    @Test
+    public void test_dfs(){
+        Graph graph = new Graph();
+        Node cat = graph.addNode("cat");
+        Node dog = graph.addNode("dog");
+        Node hamster = graph.addNode("hamster");
+        cat.addNeighbor(dog, 20);
+        cat.addNeighbor(hamster, 40);
+        LinkedList<Node> expected = new LinkedList<>();
+        expected.add(cat);
+        expected.add(hamster);
+        expected.add(dog);
+        assertEquals( expected, graph.depthFirstSearch(cat));
+    }
 
 }
